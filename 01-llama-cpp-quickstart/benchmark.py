@@ -14,6 +14,10 @@ import sys
 import time
 from pathlib import Path
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8")
+    sys.stderr.reconfigure(encoding="utf-8")
+
 try:
     from llama_cpp import Llama
 except ImportError:
@@ -200,9 +204,10 @@ def main() -> int:
     out_dir = Path("benchmarks")
     out_dir.mkdir(exist_ok=True)
     md = render_md(primary, compare)
-    (out_dir / "01-quickstart-results.md").write_text(md)
+    (out_dir / "01-quickstart-results.md").write_text(md, encoding="utf-8")
     (out_dir / "01-quickstart-results.json").write_text(
-        json.dumps({"primary": primary, "compare": compare}, indent=2)
+        json.dumps({"primary": primary, "compare": compare}, indent=2),
+        encoding="utf-8",
     )
 
     print("\n" + md)

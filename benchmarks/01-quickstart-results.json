@@ -1,0 +1,36 @@
+{
+  "primary": {
+    "label": "primary (Q4_K_M)",
+    "model_path": "D:\\VinAi\\Phase5\\Day20-Track2-NguyenHoangLan-2A202600899\\models\\qwen2.5-1.5b-instruct-q4_k_m.gguf",
+    "n_threads": 4,
+    "n_ctx": 2048,
+    "n_batch": 512,
+    "n_gpu_layers": 0,
+    "load_ms": 2279.4,
+    "ttft_ms_p50": 199.7,
+    "ttft_ms_p95": 248.1,
+    "tpot_ms_p50": 51.68,
+    "tpot_ms_p95": 54.34,
+    "e2e_ms_p50": 1818.6,
+    "e2e_ms_p95": 1853.4,
+    "e2e_ms_p99": 1854.5,
+    "decode_rate_tok_s": 19.4
+  },
+  "compare": {
+    "label": "compare (Q2_K)",
+    "model_path": "D:\\VinAi\\Phase5\\Day20-Track2-NguyenHoangLan-2A202600899\\models\\qwen2.5-1.5b-instruct-q2_k.gguf",
+    "n_threads": 4,
+    "n_ctx": 2048,
+    "n_batch": 512,
+    "n_gpu_layers": 0,
+    "load_ms": 1333.6,
+    "ttft_ms_p50": 267.1,
+    "ttft_ms_p95": 328.6,
+    "tpot_ms_p50": 46.63,
+    "tpot_ms_p95": 49.47,
+    "e2e_ms_p50": 1709.8,
+    "e2e_ms_p95": 1819.7,
+    "e2e_ms_p99": 1829.0,
+    "decode_rate_tok_s": 21.4
+  }
+}
